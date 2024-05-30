@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELETRIK BOT 1.0</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ELETRIK BOT 1.0</h1>
+        <div class="chat-container">
+            {% if response %}
+            <div class="response">
+                {% for snippet in response %}
+                <div class="message bot">
+                    <div class="message-text">{{ snippet }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <form action="/ask" method="post" class="input-form">
+            <input type="text" id="question" name="question" autocomplete="off" placeholder="Digite sua pergunta..."><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>

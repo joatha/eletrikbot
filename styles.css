@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #343541;
+    color: #d1d5db;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Impede a rolagem do body */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 90vh; /* Define a altura da área visível */
+    background-color: #40414f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Impede a rolagem da container */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.chat-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #343541; /* Define a cor de fundo da área de mensagens */
+    border-bottom: 1px solid #3f3f46;
+}
+
+.response {
+    padding: 10px;
+    background-color: #2b2d31;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e2e; /* Fundo de destaque */
+    border: 1px solid #3f3f46; /* Borda para o fundo de destaque */
+    text-align: justify; /* Justificar texto */
+    color: #e0e0e0; /* Cor do texto */
+}
+
+.message.bot {
+    background-color: #3c3d42; /* Fundo de destaque para respostas do bot */
+    border: 1px solid #3f3f46; /* Borda para o fundo de destaque do bot */
+    text-align: justify; /* Justificar texto */
+}
+
+.message-text {
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #40414f; /* Fundo da área de entrada */
+}
+
+input[type="text"], input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4b4b57;
+    background-color: #1e1e2e;
+    color: #ffffff;
+}
+
+input[type="submit"] {
+    background-color: #10a37f;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #0e8f6f;
+}
